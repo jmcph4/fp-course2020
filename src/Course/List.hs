@@ -151,8 +151,8 @@ filter ::
   (a -> Bool)
   -> List a
   -> List a
-filter =
-  error "todo: Course.List#filter"
+filter a Nil = Nil
+filter a (h :. t) = if (a h) then (h :. (filter a t)) else (filter a t)
 
 -- | Append two lists to a new list.
 --
