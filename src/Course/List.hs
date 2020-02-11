@@ -119,8 +119,8 @@ sum (h :. t) = h + (sum t)
 length ::
   List a
   -> Int
-length =
-  error "todo: Course.List#length"
+length Nil = 0
+length (h :. t) = 1 + (length t)
 
 -- | Map the given function on each element of the list.
 --
