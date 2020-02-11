@@ -92,8 +92,8 @@ headOr = \funca -> \funcb -> case funcb of
 product ::
   List Int
   -> Int
-product =
-  error "todo: Course.List#product"
+product Nil = 1
+product (h :. t) = h * (product t)
 
 -- | Sum the elements of the list.
 --
