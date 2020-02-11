@@ -107,8 +107,8 @@ product (h :. t) = h * (product t)
 sum ::
   List Int
   -> Int
-sum =
-  error "todo: Course.List#sum"
+sum Nil = 0
+sum (h :. t) = h + (sum t)
 
 -- | Return the length of the list.
 --
