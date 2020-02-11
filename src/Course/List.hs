@@ -75,8 +75,9 @@ headOr ::
   a
   -> List a
   -> a
-headOr =
-  error "todo: Course.List#headOr"
+headOr = \funca -> \funcb -> case funcb of
+    Nil -> funca
+    h :. t -> h
 
 -- | The product of the elements of a list.
 --
